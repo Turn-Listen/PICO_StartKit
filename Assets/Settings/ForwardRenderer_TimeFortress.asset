@@ -1,0 +1,95 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de640fe3d0db1804a85f9fc8f5cadab6, type: 3}
+  m_Name: ForwardRenderer_TimeFortress
+  m_EditorClassIdentifier: 
+  m_RendererFeatures:
+  - {fileID: 2462359022867018800}
+  m_RendererFeatureMap: 307477337c0e2c22
+  postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
+  xrSystemData: {fileID: 11400000, guid: 60e1133243b97e347b653163a8c01b64, type: 2}
+  shaders:
+    blitPS: {fileID: 4800000, guid: c17132b1f77d20942aa75f8429c0f8bc, type: 3}
+    copyDepthPS: {fileID: 4800000, guid: d6dae50ee9e1bfa4db75f19f99355220, type: 3}
+    screenSpaceShadowPS: {fileID: 4800000, guid: 0f854b35a0cf61a429bd5dcfea30eddd, type: 3}
+    samplingPS: {fileID: 4800000, guid: 04c410c9937594faa893a11dceb85f7e, type: 3}
+    tileDepthInfoPS: {fileID: 0}
+    tileDeferredPS: {fileID: 0}
+    stencilDeferredPS: {fileID: 4800000, guid: e9155b26e1bc55942a41e518703fe304, type: 3}
+    fallbackErrorPS: {fileID: 4800000, guid: e6e9a19c3678ded42a3bc431ebef7dbd, type: 3}
+    materialErrorPS: {fileID: 4800000, guid: 5fd9a8feb75a4b5894c241777f519d4e, type: 3}
+  m_OpaqueLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_TransparentLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_DefaultStencilState:
+    overrideStencilState: 0
+    stencilReference: 0
+    stencilCompareFunction: 8
+    passOperation: 0
+    failOperation: 0
+    zFailOperation: 0
+  m_ShadowTransparentReceive: 0
+  m_RenderingMode: 0
+  m_AccurateGbufferNormals: 0
+--- !u!114 &2462359022867018800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd25ddc894bd4ac4ea2601c0f8ca929e, type: 3}
+  m_Name: LightBlur
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  setting:
+    passEvent: 500
+    passRenderName: LightBlur
+    passMat: {fileID: 2100000, guid: 3a8bd3e4e9942e948ae32cbd54df16b1, type: 2}
+    passMat2: {fileID: 2100000, guid: 400c675b6a060ee45a4cac5f80bfb108, type: 2}
+    passMat3: {fileID: 0}
+    downsample: 1
+    loop: 1
+    blur: 0.5
+    _BlurLightIntensity: 1.26
+--- !u!114 &6105815766199267536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abd1ee4a8dc692f4fa4b1345764dd2ce, type: 3}
+  m_Name: DepthFog
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  setting:
+    m_shader: {fileID: 0}
+    m_FogColor: {r: 0, g: 0, b: 0, a: 0}
+    m_FogStart: 0
+    m_FogEnd: 0
+    m_NoiseCellSize: 0
+    m_NoiseRoughness: 0
+    m_NoisePersistance: 0
+    m_NoiseSpeed: {x: 0, y: 0, z: 0}
+    m_NoiseScale: 0
+    m_Material: {fileID: 0}
+    passdownsample: 1
+    passRenderName: DepthFog
+    passEvent: 500
